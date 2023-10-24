@@ -10,7 +10,7 @@
 
 
 html, body {
-    max-width: 1200px;
+    max-width: 90vw;
     margin: 0 auto;
     height: 100%;
     overflow: hidden;
@@ -22,12 +22,16 @@ header {
     padding: 10px;
     display: flex;
     align-items: center;
+    font-family: 'Sometype', monospace;
     justify-content: space-around;
 }
 
-header h1 {
-    color: white;
+header h1 a{
+    color: #4ec8d1;
+    font-family: 'Sometype', monospace;
     font-size: 2.5rem;
+    cursor: pointer;
+    
 }
 
 header span {
@@ -42,7 +46,7 @@ header .navegacao-primaria {
 
 header .navegacao-primaria li a {
     padding: 10px;
-    color: #86adf7;
+    color: #4ec8d1;
     font-size: 1.3rem;
 }
 
@@ -54,7 +58,7 @@ header .navegacao-primaria li a {
     justify-content: space-around;
     align-items: center;
     gap: 60px;
-    padding: 60px;
+    padding: 60px 0 0 15vw;
     height: 100%;
 }
 
@@ -68,25 +72,25 @@ header .navegacao-primaria li a {
 .section-div div h2 {
     font-family: 'Sometype', monospace;
     font-weight: 600;
-    color: #86adf7;
+    color: #4ec8d1;
 }
 
 .section-div div p {
     font-family: 'Sometype', monospace;
     font-weight: 200;
-    color: #86adf7;
+    color: #4ec8d1;
 }
 
 .section-div div a {
-    color: #86adf7;
+    color: #4ec8d1;
     padding: 5px 15px 5px 15px;
     border-radius: 5px;
     border: 2px solid white ;
-    width: 10vw;
+    width: 127px;
 }
 
 .section-div img {
-    width: 20vw;
+    width: 260px;
 }
 
 .digitando:after {
@@ -95,6 +99,76 @@ header .navegacao-primaria li a {
     opacity: 1;
     animation: pisca .5s infinite;
 
+}
+
+
+.section-div-paginas {
+    background-color: black;
+    animation: inicializar .7s forwards;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 15vw 10px 15vw;
+    height: 100%;
+}
+.section-div-paginas div {
+    margin-top: 75px;
+    align-self: start;
+    display: grid;
+    gap: 30px;
+}
+.section-div-paginas div h2 {
+    font-family: 'Sometype', monospace;
+    font-weight: 600;
+    color: #4ec8d1;
+}
+.section-div-paginas div p {
+    font-family: 'Sometype', monospace;
+    font-weight: 200;
+    color: #4ec8d1;
+}
+
+/*Aplicando estilos nos itens do foumulário de contato*/
+label {
+    color: #4ec8d1;
+    font-family: 'Sometype', monospace;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    min-width: 100%;
+    padding: 10px;
+    border: 1px solid #b4b2b2;
+    border-radius: 3px;
+    font-family: 'Sometype', monospace;
+}
+input[type="submit"] {
+    background-color: #4ec8d1;
+    color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    font-family: 'Sometype', monospace;
+    border-radius: 3px;
+}
+input[type="submit"]:hover {
+    background-color: #39949b;
+
+}
+
+@media (max-width: 900px){
+    html, body {
+        max-width: 100vw;
+    }
+    .section-div div {
+        margin-top: 75px;
+        align-self: start;
+        display: inline-flexbox;
+        gap: 30px;
+    }
 }
 
 @keyframes pisca {
